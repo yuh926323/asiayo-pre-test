@@ -10,9 +10,22 @@ $ docker-compose up -d
 # 執行測試
 
 ```
-$ docker exec -it asiayo-pre-test-chester-yang bash  // 進入容器
-/works/asiayo-pre-test# php artisan test --coverage
+$ docker exec -it asiayo-pre-test-chester-yang bash
+// 進入容器
+
+# php artisan test --coverage
 ```
+
+# 簡易 web 伺服器
+
+```
+$ docker exec -it asiayo-pre-test-chester-yang bash
+// 進入容器
+
+# php artisan serve --host=0.0.0.0 --port=8765
+```
+
+接著可以進行 POST https://localhost:8765/api/orders 呼叫
 
 # 題目一
 
