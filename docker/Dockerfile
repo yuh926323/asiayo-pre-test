@@ -3,6 +3,14 @@ FROM php:8-fpm
 WORKDIR /works/asiayo-pre-test
 COPY . /works/asiayo-pre-test
 
+RUN apt-get update && apt-get install -y \
+        # For php zip ext
+        zlib1g-dev \
+        libzip-dev \
+        unzip \
+        && docker-php-ext-configure zip \
+        && docker-php-ext-install -j$(nproc) zip
+
 # For composer
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
