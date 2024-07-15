@@ -4,7 +4,7 @@
 ```
 $ git clone https://github.com/yuh926323/asiayo-pre-test
 $ cd asiayo-pre-test
-$ docker-composer up -d
+$ docker-compose up -d
 ```
 
 # 執行測試
