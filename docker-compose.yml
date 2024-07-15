@@ -8,4 +8,4 @@ services:
         restart: always
         container_name: asiayo-pre-test-chester-yang
         ports:
-            - "8000:8000" # 以便 artisan serve 測試
+            - "8765:8765" # 以便 artisan serve 測試
